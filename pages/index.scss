@@ -1,0 +1,71 @@
+@import "../css/config";
+
+.index-page {
+    flex: 1 0 auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    font-family: inherit;
+
+    .hero {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+        background: #203d53;
+        color: white;
+        font-weight: 300;
+
+        .titles {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+            
+            h1 {
+                padding-left: 15px;
+                line-height: 1.0;
+                color: lighten(#46a0a0, 16);
+            }
+        }
+
+        a.button {
+            background: #4eb6b5;
+            color: white;
+            padding: 10px;
+            min-width: 200px;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    .packages {
+        align-self: center;
+        max-width: $max-width;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        margin-top: 50px;
+
+        section {
+            flex: 1;
+            padding-right: 30px;
+
+            &::last-child {
+                padding-right: 0;
+            }
+
+            h3 {
+                color: lighten(#203d53, 10);
+            }
+
+            p {
+                color: #203d53;
+            }
+        }
+    }
+}

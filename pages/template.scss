@@ -1,0 +1,154 @@
+@import "../css/config";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  // font-family: "Open Sans";
+  // font-family: inherit;
+
+  .logo-container {
+    display: inline-flex;
+    
+    >.title {
+      padding-left: 7px;
+      font-size: 18px;
+      line-height: 18px;
+
+      color: white;
+      display: flex;
+        align-items: center;
+    }
+  }
+
+  .logo {
+      background-image: url('./_images/simplr.jpg');
+      background-size: cover;
+
+      background-size: cover;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+
+      &.light {
+        background-image: url('./_images/simplr-light.jpg');
+      }
+  }
+
+  header.top-bar {
+    width: 100%;
+    color: white;
+    background: #122333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+      max-width: $max-width;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+          padding-right: 30px;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  > section.content {
+    flex: 1 0 auto;
+    width: 100%;
+    font-family: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    width: 100%;
+    color: white;
+    background: #203d53;
+    display: block;
+
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+    > .columns, > .merchandise {
+      margin: 0 auto;
+      max-width: $max-width;
+    }
+
+    > .columns {
+      display: flex;
+      flex-direction: row;
+
+      > .column {
+          flex: 1;
+          padding-right: 30px;
+
+          display: flex;
+          flex-direction: column;
+
+          &:first-child {
+            flex-grow: 0;
+          }
+        }
+    }
+
+    h6 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    ul li {
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .merchandise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
+
+      .QuatroDev {
+        flex: 1 0 auto;
+        background: url('./_images/quatrodev-white-cloud.png') no-repeat;
+        background-size: cover;
+        // height: 35px;
+        // width: 200px;
+        width: 300px;
+        height: 52px;
+        opacity: 0.6;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
