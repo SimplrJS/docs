@@ -16,12 +16,10 @@ class HtmlComponent extends React.Component {
     const title = DocumentTitle.rewind();
 
     let css = null;
-    if (process.env.NODE_ENV === 'production') {
+    let productionBuild = process.env.NODE_ENV === 'production';
+    if (productionBuild) {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
-
-    // inside HTML component render() method
-    const productionBuild = Boolean(this.props.body);
 
     let routes = this.props.routes;
     let route;

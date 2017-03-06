@@ -45,8 +45,8 @@ class SomeReactCode extends React.Component {
                                 Unfortunatelly, it is not that developer-friendly and required handling actions in a non-standardised manner.
                             </p>
                             <p>
-                                This package enables you to handle actions by their, without nasty checks required.
-                                </p>
+                                This package enables you to handle actions by their type, without nasty and never ending if or switch trees.
+                            </p>
                         </section>
                         <section>
                             <h3>simplr-forms-core</h3>
@@ -54,13 +54,13 @@ class SomeReactCode extends React.Component {
                                 React framework makes it straightforward using components, but does not provide a good forms experience.
                             </p>
                             <p>
-                                This package enhances developer's life and code maintainability by leveraging framework features, flux architecture and easy API.
+                                This package enhances developer's life and code maintainability by leveraging framework features, flux architecture and all familiar API.
                             </p>
                         </section>
                         <section>
                             <h3>simplr-forms</h3>
                             <p>
-                                Having and amazing simplr-forms-core is one thing, but having specific implementations for react and react-native is a whole different world.
+                                This package is a tailored forms implementation for browser. simplr-forms-native is comming in the future.
                             </p>
                             <p>
                                 Enjoy.
