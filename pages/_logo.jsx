@@ -21,7 +21,9 @@ let logo = function (imageClass) {
                     className="logo-container"
                 >
                     <span className={`logo ${(imageClass != null ? imageClass : "")}`}></span>
-                    <span className="title">SimplrJS</span>
+                    <div className="title">
+                        SimplrJS
+                    </div>
                 </Link>
             )
         },

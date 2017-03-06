@@ -68,15 +68,19 @@ module.exports = React.createClass({
       <main>
         <header
           className="top-bar">
-          <section className="logo">
+          <section>
             <Logo />
             <nav>
-              <Link
-                to={prefixLink('/docs/')}
-              >
-                Docs
-              </Link>
-              <a href="https://github.com/simplrjs">Github</a>
+              <div className="link-container">
+                <Link
+                  to={prefixLink('/docs/')}
+                >
+                  Docs
+                </Link>
+              </div>
+              <div className="link-container">
+                <a href="https://github.com/simplrjs">Github</a>
+              </div>
             </nav>
           </section>
         </header>

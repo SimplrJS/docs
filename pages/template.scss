@@ -10,16 +10,36 @@ main {
 
   .logo-container {
     display: inline-flex;
+    height: 32px;
     
     >.title {
       padding-left: 7px;
       font-size: 18px;
       line-height: 18px;
+      height: 30px;
 
       color: white;
       display: flex;
-        align-items: center;
+      align-items: center;
     }
+
+     &:hover {
+        background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),#848484,rgba(255,255,255,0));
+        -moz-background-size: 100% 1px;
+        -o-background-size: 100% 1px;
+        -webkit-background-size: 100% 1px;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        >.title {
+          color: darken(white, 15);
+        }
+
+        >.logo {
+          opacity: 0.8;
+        }
+      }
   }
 
   .logo {
@@ -59,6 +79,10 @@ main {
         text-decoration: none;
         display: flex;
         align-items: center;
+
+        &:hover {
+          color: darken(white, 15);
+        }
       }
 
       nav {
@@ -66,11 +90,23 @@ main {
         flex-direction: row;
         justify-content: space-around;
 
-        a {
-          padding-right: 30px;
+        .link-container {
+          margin-right: 30px;
+          display: flex;
+          align-items: center;
 
           &:last-child {
-            padding-right: 0;
+            margin-right: 0;
+          }
+
+          &:hover {
+            background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),#848484,rgba(255,255,255,0));
+            -moz-background-size: 100% 1px;
+            -o-background-size: 100% 1px;
+            -webkit-background-size: 100% 1px;
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: bottom;
           }
         }
       }
