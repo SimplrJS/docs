@@ -8,13 +8,16 @@ import { Logo, LogoImageLight } from "./_logo";
 import './index.scss';
 
 exports.data = {
-    title: 'SimplrJS - make your Javascript life simple',
+    title: "SimplrJS - make your Javascript life simple",
+    description: "Packages to make your life simple"
 }
 
-const SomeReactCode = React.createClass({
-
+class SomeReactCode extends React.Component {
+    static contextTypes = {
+        router: React.PropTypes.object.isRequired
+    }
     render() {
-        const page = this.props.route.page
+        const page = this.props.route.page;
 
         return (
             <DocumentTitle title={`${page.data.title} | ${config.siteTitle}`}>
@@ -67,7 +70,7 @@ const SomeReactCode = React.createClass({
                 </section>
             </DocumentTitle>
         )
-    },
-})
+    }
+}
 
-export default SomeReactCode
+export default SomeReactCode;

@@ -8,17 +8,50 @@ import { colors } from 'utils/colors'
 
 const BUILD_TIME = new Date().getTime()
 
-module.exports = React.createClass({
-  displayName: 'HTML',
-  propTypes: {
+class HtmlComponent extends React.Component {
+  static propTypes = {
     body: React.PropTypes.string,
-  },
+  };
   render() {
-    const title = DocumentTitle.rewind()
+    const title = DocumentTitle.rewind();
 
-    let css
+    let css = null;
     if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+    }
+
+    // inside HTML component render() method
+    const productionBuild = Boolean(this.props.body);
+
+    let routes = this.props.routes;
+    let route;
+    if (routes != null) {
+      routes[routes.length - 1];
+    }
+    let metadata = null;
+    if (false) {
+      let currentPage = route.page;
+      let location = this.props.location;
+
+      for (let p of route.pages) {
+        // console.log(p.path, p.data.title);
+      }
+
+      // console.log(JSON.stringify(route.pages, null, 4));
+      // throw new Error();
+
+      meta = [];
+      if (location != null) {
+        meta.push(<meta property="og:url" content={location.pathname} />);
+      }
+      if (currentPage != null) {
+        meta.push(<meta property="og:description" content={currentPage.data.description} />);
+      }
+    }
+
+    let bundle = null;
+    if (productionBuild) {
+      bundle = <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />;
     }
 
     return (
@@ -30,6 +63,7 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          {metadata}
           <title>{title}</title>
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
@@ -37,9 +71,11 @@ module.exports = React.createClass({
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+          {bundle}
         </body>
       </html>
     )
-  },
-})
+  }
+};
+
+export default HtmlComponent;

@@ -7,9 +7,9 @@ module.exports = React.createClass({
   propTypes: {
     route: React.PropTypes.object,
   },
-  // contextTypes: {
-  //   router: React.PropTypes.object.isRequired
-  // },
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
   // componentDidMount() {
   //   const _this = this;
   //   catchLinks(this.refs.markdown, function (href) {
@@ -18,7 +18,10 @@ module.exports = React.createClass({
   // },
 
   render() {
-    const post = this.props.route.page.data
+    const post = this.props.route.page.data;
+    let router = this.context.router;
+    let routes = router.routes;
+    let location = router.location;
 
     return (
       <DocumentTitle title={`${post.title} | ${config.siteTitle}`}>
@@ -29,4 +32,4 @@ module.exports = React.createClass({
       </DocumentTitle >
     )
   },
-})
+});

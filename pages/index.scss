@@ -46,16 +46,26 @@
         align-self: center;
         max-width: $max-width;
         width: 100%;
+        
         display: flex;
         justify-content: space-around;
+        padding-top: 50px;
+        padding-left: 20px;
+            padding-right: 20px;
 
-        margin-top: 50px;
+        @media (max-width: 800px){
+            flex-direction: column;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
 
         section {
             flex: 1;
             padding-right: 30px;
 
-            &::last-child {
+            &:last-child {
                 padding-right: 0;
             }
 
