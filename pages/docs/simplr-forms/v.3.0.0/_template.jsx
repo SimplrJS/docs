@@ -12,7 +12,6 @@ class SimplrForms300 extends React.Component {
         if (groupName == null) {
             groupName = topGroup;
         }
-        // console.log(groups);
         let group = groups[groupName];
 
         if (group == null) {
@@ -21,7 +20,6 @@ class SimplrForms300 extends React.Component {
 
         let lis = group.map(item => {
             let children = null;
-            console.log(item.Group);
             if (item.Group != null) {
                 children = this.renderNavigation(groups, item.Group);
             }
@@ -41,6 +39,9 @@ class SimplrForms300 extends React.Component {
     }
 
     render() {
+        for (let page of this.props.route.pages) {
+            console.log(page);
+        }
         let menuItems = this.props.route.pages
             .filter(page => page.data.layout === "package-docs" &&
                 page.data.packageName === "simplr-forms")

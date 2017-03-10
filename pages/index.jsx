@@ -23,11 +23,6 @@ class PagesIndex extends React.Component {
         let currentPath = this.props.location.pathname;
         let currentRoute = routes.find(x => x.path == currentPath);
 
-        console.group(PagesIndex.name);
-        console.log(this.props.route.pages);
-        console.log(currentPath);
-        console.groupEnd();
-
         return (
             <DocumentTitle title={`${page.data.title} | ${config.siteTitle}`}>
                 <section className="index-page">

@@ -28,6 +28,7 @@ class SimplrFormsIndex extends React.Component {
 
     render() {
         let pages = this.props.route.pages;
+        
         let versions = pages
             .filter(x => x.data.layout === "package-version-index" &&
                 x.data.packageName === "simplr-forms")
