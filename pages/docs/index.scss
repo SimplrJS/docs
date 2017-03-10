@@ -1,0 +1,10 @@
+@import "../../css/config";
+
+section.docs-index {
+    >.content {
+        ul {
+            list-style: circle;
+            padding-left: 20px;
+        }
+    }
+}

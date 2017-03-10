@@ -12,12 +12,21 @@ exports.data = {
     description: "Packages to make your life simple"
 }
 
-class SomeReactCode extends React.Component {
+class PagesIndex extends React.Component {
     static contextTypes = {
         router: React.PropTypes.object.isRequired
     }
     render() {
         const page = this.props.route.page;
+
+        let routes = this.props.routes;
+        let currentPath = this.props.location.pathname;
+        let currentRoute = routes.find(x => x.path == currentPath);
+
+        console.group(PagesIndex.name);
+        console.log(this.props.route.pages);
+        console.log(currentPath);
+        console.groupEnd();
 
         return (
             <DocumentTitle title={`${page.data.title} | ${config.siteTitle}`}>
@@ -73,4 +82,4 @@ class SomeReactCode extends React.Component {
     }
 }
 
-export default SomeReactCode;
+export default PagesIndex;

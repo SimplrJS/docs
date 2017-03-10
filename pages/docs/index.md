@@ -1,5 +1,0 @@
----
-title: "SimplrJS documentation"
----
-
-Documentation

@@ -13,7 +13,7 @@ class HtmlComponent extends React.Component {
     body: React.PropTypes.string,
   };
   render() {
-    const title = DocumentTitle.rewind();
+    let title = DocumentTitle.rewind();
 
     let css = null;
     let productionBuild = process.env.NODE_ENV === 'production';
@@ -24,7 +24,7 @@ class HtmlComponent extends React.Component {
     let routes = this.props.routes;
     let route;
     if (routes != null) {
-      routes[routes.length - 1];
+      route = routes[routes.length - 1];
     }
     let metadata = null;
     if (false) {
@@ -44,11 +44,14 @@ class HtmlComponent extends React.Component {
       }
       if (currentPage != null) {
         meta.push(<meta property="og:description" content={currentPage.data.description} />);
+        if (title == null) {
+          title = currentPage.data.title;
+        }
       }
     }
 
     let bundle = null;
-    if (productionBuild) {
+    if (!productionBuild) {
       bundle = <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />;
     }
 

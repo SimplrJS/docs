@@ -1,0 +1,33 @@
+@import "../../../../css/config";
+
+.simplr-forms-3 {
+    width: 100%;
+    max-width: $max-width;
+
+    display: flex;
+    flex-direction: row;
+    
+    
+    > nav {
+        min-width: 200px;
+        border-right: 1px solid lightgrey;
+
+        ul {
+            margin: 0;
+
+           li > ul {
+                padding-left: 20px;
+            }
+
+            li {
+                font-family: "Open Sans";
+
+            }
+        }
+    }
+
+    > .content {
+        max-width: $max-width;
+        padding-left: 40px;
+    }
+}
