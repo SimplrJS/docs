@@ -39,9 +39,6 @@ class SimplrForms300 extends React.Component {
     }
 
     render() {
-        for (let page of this.props.route.pages) {
-            console.log(page);
-        }
         let menuItems = this.props.route.pages
             .filter(page => page.data.layout === "package-docs" &&
                 page.data.packageName === "simplr-forms")

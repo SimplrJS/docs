@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@types/node@^7.0.8":
+  version "7.0.8"
+  resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/@types/node/-/@types/node-7.0.8.tgz#25e4dd804b630c916ae671233e6d71f6ce18124a"
+
+"@types/react-globals@^0.1.0":
+  version "0.1.0"
+  resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/@types/react-globals/-/@types/react-globals-0.1.0.tgz#168dce17aedb7c5e261a9045dab16fb54755e3a1"
+
 "@types/react@^15.0.15":
   version "15.0.15"
   resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/@types/react/-/@types/react-15.0.15.tgz#c386d6906177c5ddaa5804e7f215010d77c33caf"
@@ -5207,15 +5215,7 @@ react-document-title@^2.0.1:
   dependencies:
     react-side-effect "^1.0.2"
 
-react-dom@^15.4.1:
-  version "15.4.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.1.tgz#d54c913261aaedb17adc20410d029dcc18a1344a"
-  dependencies:
-    fbjs "^0.8.1"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-
-react-dom@^15.4.2:
+react-dom@^15.4.1, react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -5301,6 +5301,14 @@ react-typography@^0.15.0:
 react@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+react@^15.4.2:
+  version "15.4.2"
+  resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
@@ -6166,6 +6174,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typescript@^2.2.1:
+  version "2.2.1"
+  resolved "https://www.myget.org/F/quatrodev-insider/auth/a2ff4e2d-c219-42fd-9515-2989c9cd8417/npm/typescript/-/typescript-2.2.1.tgz#4862b662b988a4c8ff691cc7969622d24db76ae9"
 
 typography-normalize@^0.14.0:
   version "0.14.0"

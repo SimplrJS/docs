@@ -66,6 +66,8 @@ class HtmlComponent extends React.Component {
           />
           {metadata}
           <title>{title}</title>
+          <script src="//unpkg.com/es6-promise@4.0.5/dist/es6-promise.auto.min.js"></script>
+          <script src="//unpkg.com/tslib@1.6.0/tslib.js"></script>
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
           {css}
